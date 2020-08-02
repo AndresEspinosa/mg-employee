@@ -1,0 +1,13 @@
+{
+  "environment": {
+    "name": "local"
+  },
+  "serviceMocker": {
+    "exclude": [
+      "mockEmployeeGetAllSvc"
+    ]
+  },
+  "services": {
+    "root": "https://localhost:5100"
+  }
+}

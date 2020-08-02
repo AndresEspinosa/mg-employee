@@ -1,0 +1,50 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masglobal.Employee.Api", "Masglobal.Employee.Api\Masglobal.Employee.Api.csproj", "{71DBF88F-A8DD-44B5-AF26-425211653FD9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3823C32D-E5A7-49F4-98FE-C210A14BF925}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservice", "Microservice", "{7F14BE5B-2455-4271-8096-1F0FCF1A0A2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masglobal.Employee.Services", "Masglobal.Employee.Services\Masglobal.Employee.Services.csproj", "{65A3E6BA-B67B-408E-AF49-3242EB9AAB57}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{C2C7D1A3-27A8-4E14-9711-5A57BD85CF7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masglobal.Employee.Test", "Masglobal.Employee.Test\Masglobal.Employee.Test.csproj", "{7B44EEBF-1D66-404B-968D-2FB6867C2C13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Masglobal.Employee.Model", "Masglobal.Employee.Model\Masglobal.Employee.Model.csproj", "{893CB792-223B-4C47-9CB2-17D6CAD58BE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{71DBF88F-A8DD-44B5-AF26-425211653FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71DBF88F-A8DD-44B5-AF26-425211653FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71DBF88F-A8DD-44B5-AF26-425211653FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71DBF88F-A8DD-44B5-AF26-425211653FD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65A3E6BA-B67B-408E-AF49-3242EB9AAB57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65A3E6BA-B67B-408E-AF49-3242EB9AAB57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65A3E6BA-B67B-408E-AF49-3242EB9AAB57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65A3E6BA-B67B-408E-AF49-3242EB9AAB57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B44EEBF-1D66-404B-968D-2FB6867C2C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B44EEBF-1D66-404B-968D-2FB6867C2C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B44EEBF-1D66-404B-968D-2FB6867C2C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B44EEBF-1D66-404B-968D-2FB6867C2C13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893CB792-223B-4C47-9CB2-17D6CAD58BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893CB792-223B-4C47-9CB2-17D6CAD58BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893CB792-223B-4C47-9CB2-17D6CAD58BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893CB792-223B-4C47-9CB2-17D6CAD58BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{71DBF88F-A8DD-44B5-AF26-425211653FD9} = {7F14BE5B-2455-4271-8096-1F0FCF1A0A2A}
+		{65A3E6BA-B67B-408E-AF49-3242EB9AAB57} = {7F14BE5B-2455-4271-8096-1F0FCF1A0A2A}
+		{7B44EEBF-1D66-404B-968D-2FB6867C2C13} = {C2C7D1A3-27A8-4E14-9711-5A57BD85CF7F}
+		{893CB792-223B-4C47-9CB2-17D6CAD58BE5} = {7F14BE5B-2455-4271-8096-1F0FCF1A0A2A}
+	EndGlobalSection
+EndGlobal

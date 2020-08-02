@@ -1,0 +1,23 @@
+[
+  {
+    "component": "EmployeePageContainer",
+    "name": "employee",
+    "permission": "MainMenu.Employee",
+    "requiresLogout": false,
+    "url": "/"
+  },
+  {
+    "component": "LoginPageContainer",
+    "name": "login",
+    "permission": null,
+    "requiresLogout": true,
+    "url": "/login"
+  },
+  {
+    "component": "LogoutPageContainer",
+    "name": "logout",
+    "permission": "MainMenu.Logout",
+    "requiresLogout": false,
+    "url": "/logout"
+  }
+]

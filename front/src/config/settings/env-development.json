@@ -1,0 +1,11 @@
+{
+  "environment": {
+    "name": "development"
+  },
+  "serviceMocker": {
+    "exclude": []
+  },
+  "services": {
+    "root": "https://dev.azurewebsites.net"
+  }
+}

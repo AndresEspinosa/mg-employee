@@ -1,0 +1,12 @@
+{
+  "authToken": "91AE2B60-A22E-43BA-B550-5D459A6A5F92",
+  "avatarUrl": "https://avatarfiles.alphacoders.com/136/136083.jpg",
+  "email": "admin@test.com",
+  "languageCode": "en",
+  "name": "Admin",
+  "permissions": [
+    "MainMenu.Employee",
+    "MainMenu.Logout"
+  ],
+  "userId": 1
+}

@@ -1,0 +1,32 @@
+{
+  "ajaxInterceptors": {
+    "convertRequestDataTo": "PascalCase",
+    "convertResponseDataTo": "camelCase",
+    "showLoadingPage": true,
+    "showNotifications": true
+  },
+  "localStorage": {
+    "device": "localStorage",
+    "isEnabled": true,
+    "key": "state",
+    "savableState": [
+      "appVersion",
+      "user"
+    ],
+    "throttleWait": 1000
+  },
+  "reduxLogger": {
+    "isEnabled": true
+  },
+  "serviceMocker": {
+    "delayResponse": 300,
+    "isEnabled": true,
+    "loginEmail": "admin@test.com",
+    "loginPassword": "MTIz"
+  },
+  "toastNoficiation": {
+    "autoHideDuration": 5000,
+    "horizontalPosition": "center",
+    "verticalPosition": "bottom"
+  }
+}

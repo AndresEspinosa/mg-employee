@@ -1,0 +1,86 @@
+{
+  "appName": "Employee",
+  "common": {
+    "cancel": "Cancel",
+    "close": "Close",
+    "collapse": "Collapse",
+    "delete": "Delete",
+    "develpment": "Comming soon!! :P",
+    "edit": "Edit",
+    "expand": "Expand",
+    "export": "Export",
+    "lastUpdate": "Last update",
+    "new": "New",
+    "options": "Options",
+    "save": "Save",
+    "view": "View"
+  },
+  "employee": {
+    "getAll": "Get Employees",
+    "searchPlaceholder": "Enter ID"
+  },
+  "loginPage": {
+    "continue": "Continue",
+    "formTitle": "Log in",
+    "invalidCredentials": "Invalid user name or password!",
+    "password": "Password",
+    "userLabel": "Email",
+    "passwordPlaceholder": "password",
+    "userPlaceholder": "name@test.com"
+  },
+  "masterData": {
+  },
+  "modalDialog": {
+    "cancel": "Cancel",
+    "msg": "Are you sure you want to perform this action?",
+    "ok": "Ok",
+    "title": "Confirm"
+  },
+  "notFoundPage": {
+    "content": "The resource you are looking for has been removed, had its name changed, or is temporarily unavailable."
+  },
+  "notifications": {
+    "delete": "The record was successfully deleted!",
+    "insert": "The record was successfully inserted!",
+    "update": "The record was successfully updated!"
+  },
+  "pagination": {
+    "items": "items",
+    "itemsPerPage": "Items per page",
+    "next": "Next",
+    "of": "of",
+    "ofTotal": "of total",
+    "page": "Page",
+    "previous": "Previous",
+    "showing": "Showing records from",
+    "to": "to"
+  },
+  "routes": {
+    "employee": "Employee",
+    "login": "Login",
+    "logout": "Logout"
+  },
+  "table": {
+    "noData": "No Data",
+    "previousPage": "Previous Page",
+    "nextPage": "Next Page"
+  },
+  "textFieldPlaceHolders": {
+    "email": "email@company.com",
+    "phone": "(555) 555-5555",
+    "zip": "12345 / 12345-6789"
+  },
+  "validations": {
+    "date": "Invalid date",
+    "email": "Invalid email",
+    "maxValue": "Max value: {0}",
+    "minCharacters": "Expected at least {0} characters",
+    "minValue": "Min value: {0}",
+    "number": "Invalid number",
+    "phone": "Invalid phone",
+    "required": "Required field",
+    "search": "Invalid search",
+    "verification": "Verification doesn't match",
+    "zip": "Invalid zip code"
+  }
+}

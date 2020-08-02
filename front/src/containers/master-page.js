@@ -1,0 +1,185 @@
+// @packages
+import PropTypes from 'prop-types';
+import React from 'react';
+import { bindActionCreators } from 'redux';
+import { compose } from 'recompose';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
+
+// @scripts
+import MasterPage from '../pages/master-page';
+import { config } from '../config';
+import { globalUI } from '../core';
+
+import {
+    collapseMainMenu,
+    collapseMenuItem,
+    expandMainMenu,
+    expandMenuItem
+} from '../actions/main-menu';
+
+const MasterPageContainer = ({
+    history,
+    loadingPageIsVisible,
+    loadingPageMsg,
+    location,
+    mainMenuExpandedItems,
+    mainMenuIsExpanded,
+    mainMenuOnCollapse,
+    mainMenuOnCollapseItem,
+    mainMenuOnExpand,
+    mainMenuOnExpandItem,
+    modalDialogCancelLabel,
+    modalDialogIsVisible,
+    modalDialogMsg,
+    modalDialogOkLabel,
+    modalDialogOnConfirm,
+    modalDialogShowCancel,
+    modalDialogTitle,
+    modalDialogWidth,
+    toastNotificationIsVisible,
+    toastNotificationMsg,
+    toastNotificationType,
+    userEmail,
+    userLanguageCode,
+    userName,
+    userPermissions
+}) => {
+    config.applyLanguage(userLanguageCode);
+    globalUI.setBrowserHistory(history);
+
+    const currentUrl = location.pathname;
+    const route = config.routes.find(route => route.url === currentUrl);
+    const pageTitle = route ? config.text.routes[route.name] : null;
+
+    return (
+        <MasterPage
+            appName={config.text.appName}
+            currentUrl={currentUrl}
+            loadingPageProps={{
+                isVisible: loadingPageIsVisible,
+                msg: loadingPageMsg
+            }}
+            mainMenuProps={{
+                expandedItems: mainMenuExpandedItems,
+                isExpanded: mainMenuIsExpanded,
+                onCollapse: mainMenuOnCollapse,
+                onCollapseItem: mainMenuOnCollapseItem,
+                onExpand: mainMenuOnExpand,
+                onExpandItem: mainMenuOnExpandItem
+            }}
+            modalDialogProps={{
+                cancelLabel: modalDialogCancelLabel,
+                isVisible: modalDialogIsVisible,
+                msg: modalDialogMsg,
+                okLabel: modalDialogOkLabel,
+                onConfirm: modalDialogOnConfirm,
+                onHide: globalUI.hideModalDialog,
+                showCancel: modalDialogShowCancel,
+                title: modalDialogTitle,
+                width: modalDialogWidth
+            }}
+            pageTitle={pageTitle}
+            toastNotificationProps={{
+                isVisible: toastNotificationIsVisible,
+                msg: toastNotificationMsg,
+                onHide: globalUI.hideToastNotification,
+                type: toastNotificationType
+            }}
+            userProps={{
+                email: userEmail,
+                isLoggedIn: Boolean(userPermissions.length),
+                name: userName,
+                permissions: userPermissions
+            }}
+        />
+    );
+};
+
+MasterPageContainer.propTypes = {
+    history: PropTypes.shape({
+        location: PropTypes.object.isRequired,
+        push: PropTypes.func.isRequired
+    }).isRequired,
+    location: PropTypes.shape({
+        pathname: PropTypes.string.isRequired
+    }).isRequired,
+    loadingPageIsVisible: PropTypes.bool.isRequired,
+    loadingPageMsg: PropTypes.string,
+    mainMenuExpandedItems: PropTypes.arrayOf(PropTypes.string).isRequired,
+    mainMenuIsExpanded: PropTypes.bool.isRequired,
+    mainMenuOnCollapse: PropTypes.func.isRequired,
+    mainMenuOnExpand: PropTypes.func.isRequired,
+    mainMenuOnCollapseItem: PropTypes.func.isRequired,
+    mainMenuOnExpandItem: PropTypes.func.isRequired,
+    modalDialogCancelLabel: PropTypes.string,
+    modalDialogIsVisible: PropTypes.bool.isRequired,
+    modalDialogMsg: PropTypes.oneOfType([PropTypes.element, PropTypes.string]),
+    modalDialogOkLabel: PropTypes.string,
+    modalDialogOnConfirm: PropTypes.func,
+    modalDialogShowCancel: PropTypes.bool,
+    modalDialogTitle: PropTypes.string,
+    modalDialogWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+    toastNotificationIsVisible: PropTypes.bool.isRequired,
+    toastNotificationMsg: PropTypes.string,
+    toastNotificationType: PropTypes.string,
+    userEmail: PropTypes.string,
+    userLanguageCode: PropTypes.string.isRequired,
+    userName: PropTypes.string,
+    userPermissions: PropTypes.arrayOf(PropTypes.string).isRequired
+};
+
+MasterPageContainer.defaultProps = {
+    loadingPageMsg: null,
+    modalDialogCancelLabel: null,
+    modalDialogMsg: null,
+    modalDialogOkLabel: null,
+    modalDialogOnConfirm: null,
+    modalDialogShowCancel: true,
+    modalDialogTitle: null,
+    modalDialogWidth: null,
+    toastNotificationMsg: null,
+    toastNotificationType: null,
+    userEmail: null,
+    userName: null
+};
+
+const mapDispatchToProps = dispatch => bindActionCreators({
+    mainMenuOnCollapse: collapseMainMenu,
+    mainMenuOnCollapseItem: collapseMenuItem,
+    mainMenuOnExpand: expandMainMenu,
+    mainMenuOnExpandItem: expandMenuItem
+}, dispatch);
+
+const mapStateToProps = ({
+    modalDialog,
+    loadingPage,
+    mainMenu,
+    toastNotification,
+    user
+}) => ({
+    loadingPageIsVisible: loadingPage.isVisible,
+    loadingPageMsg: loadingPage.msg,
+    mainMenuExpandedItems: mainMenu.expandedItems,
+    mainMenuIsExpanded: mainMenu.isExpanded,
+    modalDialogCancelLabel: modalDialog.cancelLabel,
+    modalDialogIsVisible: modalDialog.isVisible,
+    modalDialogMsg: modalDialog.msg,
+    modalDialogOkLabel: modalDialog.okLabel,
+    modalDialogOnConfirm: modalDialog.onConfirm,
+    modalDialogShowCancel: modalDialog.showCancel,
+    modalDialogTitle: modalDialog.title,
+    modalDialogWidth: modalDialog.width,
+    toastNotificationIsVisible: toastNotification.isVisible,
+    toastNotificationMsg: toastNotification.msg,
+    toastNotificationType: toastNotification.type,
+    userEmail: user.account.email,
+    userLanguageCode: user.languageCode,
+    userName: user.account.name,
+    userPermissions: user.account.permissions
+});
+
+export default compose(
+    withRouter,
+    connect(mapStateToProps, mapDispatchToProps)
+)(MasterPageContainer);

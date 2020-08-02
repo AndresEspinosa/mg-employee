@@ -1,0 +1,14 @@
+{
+  "environment": {
+    "name": "production"
+  },
+  "reduxLogger": {
+    "isEnabled": false
+  },
+  "serviceMocker": {
+    "exclude": []
+  },
+  "services": {
+    "root": "https://prd.azurewebsites.net"
+  }
+}

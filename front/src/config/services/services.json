@@ -1,0 +1,8 @@
+{
+  "employee": {
+    "getAll": "{root}/api/employee"
+  },
+  "security": {
+    "login": "{root}/api/security/login"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "environment": {
+    "name": "staging"
+  },
+  "serviceMocker": {
+    "exclude": []
+  },
+  "services": {
+    "root": "https://stg.azurewebsites.net"
+  }
+}

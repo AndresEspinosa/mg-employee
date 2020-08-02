@@ -1,0 +1,12 @@
+[
+  {
+    "icon": "group",
+    "isDefault": false,
+    "name": "employee"
+  },
+  {
+    "icon": "exit_to_app",
+    "isDefault": false,
+    "name": "logout"
+  }
+]

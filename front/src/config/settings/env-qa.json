@@ -1,0 +1,11 @@
+{
+  "environment": {
+    "name": "qa"
+  },
+  "serviceMocker": {
+    "exclude": []
+  },
+  "services": {
+    "root": "https://qa.azurewebsites.net"
+  }
+}
