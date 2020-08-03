@@ -39,9 +39,9 @@ const CtrlTable = ({
                                 {row.id}
                             </TableCell>
                             <TableCell align="right">{row.name}</TableCell>
-                            <TableCell align="right">{row.contract}</TableCell>
-                            <TableCell align="right">{row.role}</TableCell>
-                            <TableCell align="right">{row.salary}</TableCell>
+                            <TableCell align="right">{row.contractTypeName}</TableCell>
+                            <TableCell align="right">{row.roleName}</TableCell>
+                            <TableCell align="right">{row.annualSalary}</TableCell>
                         </TableRow>
                     ))}
                     </TableBody>

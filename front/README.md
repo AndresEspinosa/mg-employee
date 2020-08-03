@@ -1,6 +1,13 @@
 This project was bootstrapped with **Create React App**.
 
 Below you will find some information on how to perform common tasks.
+## Quick Startup
+
+### Mock enable/disable
+```shell
+go to src/config/settings(¡/globals.json
+set serviceMocker.isEnable
+```
 
 ## Table of Contents
 

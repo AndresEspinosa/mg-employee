@@ -3,9 +3,7 @@
     "name": "local"
   },
   "serviceMocker": {
-    "exclude": [
-      "mockEmployeeGetAllSvc"
-    ]
+    "exclude": []
   },
   "services": {
     "root": "https://localhost:5100"
