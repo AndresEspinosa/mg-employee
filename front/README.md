@@ -9,6 +9,12 @@ go to src/config/settings(¡/globals.json
 set serviceMocker.isEnable
 ```
 
+### Mock Login user
+```shell
+username: admin@test.com
+pass: 123
+```
+
 ## Table of Contents
 
 - [Environment Quick Setup](#environment-quick-setup)
